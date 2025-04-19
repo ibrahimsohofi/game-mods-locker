@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Mods Locker - Admin Demo Panel</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/minecraft-style.css">
+  <style>
+    body { background:#1a2130; color:#fff; }
+    .container { max-width: 900px; margin:0 auto; padding:18px; }
+    header { margin-bottom:2em; border-bottom: 1.5px solid #133A58; padding-bottom:1em; }
+    h1 { font-size: 2em; font-weight: bold; }
+    .warning { color:#f9b133; background:#32270a;padding:12px 22px; border-radius:6px; margin:0.5em 0 1em;font-size:1.01em; }
+    .mod-list-group { margin: 2em 0 1.6em 0; }
+    .mod-row { background:#232944; margin-bottom:10px; border-radius:7px; display:flex; align-items:center;gap:16px; padding: 8px 13px; }
+    .mod-row img { width:38px; border-radius:4px;box-shadow:0 0 4px #111a; }
+    .actions button { margin:0 6px; }
+    form { margin:1.1em 0; background:#171d30; border-radius:8px; padding:1.1em 1.4em; }
+    label{display:block;margin-bottom:4px;margin-top:7px;font-size:0.96em;}
+    input, select { width:95%;padding:0.52em 0.7em;margin-bottom:8px;background:#232944;color:#fff;border:1px solid #2461ff42;border-radius:6px; }
+    button { background:#369eeb; color:#fff; border:none; border-radius:6px;padding:0.7em 1.4em;margin-top:4px; font-weight:600;cursor:pointer; }
+    button.danger { background:#e32d1d; }
+    button.secondary { background:#2bdf91; }
+    .edit-form, .add-form {margin-top:-12px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Game Mods Locker – Admin Editor <span style="font-size:0.56em;color:#6ae6b2;">[DEMO]</span></h1>
+      <p class="warning">This is a demonstration panel only! All changes are stored in your browser (localStorage), not a global backend.<br>If you reload/clear your browser, you may lose changes. <br><a href="../index.html" style="color:#4ee4ce;">Back to Main Site</a></p>
+    </header>
+    <section>
+      <h2>Add New Mod</h2>
+      <form id="add-mod-form" class="add-form">
+        <label for="game">Game</label>
+        <select id="add-game">
+          <option value="minecraft">Minecraft</option>
+          <option value="fortnite">Fortnite</option>
+          <option value="roblox">Roblox</option>
+          <option value="gta5">GTA 5</option>
+          <option value="amongus">Among Us</option>
+          <option value="warzone">Warzone</option>
+          <option value="lol">League of Legends</option>
+          <option value="valorant">Valorant</option>
+          <option value="sims4">The Sims 4</option>
+          <option value="skyrim">Skyrim</option>
+        </select>
+        <label for="id">Unique ID (no spaces)</label>
+        <input type="text" id="add-id" required autocomplete="off">
+        <label for="name">Name</label>
+        <input type="text" id="add-name" required>
+        <label for="desc">Description</label>
+        <input type="text" id="add-desc" required>
+        <label for="img">Image Path/URL</label>
+        <input type="text" id="add-img" required>
+        <label for="downloads">Downloads (e.g., 8.2k)</label>
+        <input type="text" id="add-downloads" value="" required>
+        <label for="rating">Rating (e.g., 4.9)</label>
+        <input type="text" id="add-rating" value="" required>
+        <button type="submit" class="secondary">Add Mod</button>
+      </form>
+    </section>
+    <section id="mod-list-section"></section>
+  </div>
+  <script src="../js/admin-panel.js"></script>
+</body>
+</html>

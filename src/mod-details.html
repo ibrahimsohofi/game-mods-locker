@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mod Details</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/minecraft-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Add game selector navigation -->
+  <div class="game-selector">
+    <div class="container">
+      <ul class="all-games">
+        <li><a href="index.html">Minecraft</a></li>
+        <li><a href="fortnite.html">Fortnite</a></li>
+        <li><a href="roblox.html">Roblox</a></li>
+        <li><a href="gta5.html">GTA 5</a></li>
+        <li><a href="among-us.html">Among Us</a></li>
+        <li><a href="warzone.html">Warzone</a></li>
+        <li><a href="lol.html">League of Legends</a></li>
+        <li><a href="valorant.html">Valorant</a></li>
+        <li><a href="sims4.html">The Sims 4</a></li>
+        <li><a href="skyrim.html">Skyrim</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <a href="index.html">&larr; Back to Mods List</a>
+    <div id="mod-details" class="mod-details-card"></div>
+    <button id="download-btn" class="download-btn">Download</button>
+  </div>
+
+  <!-- Modal Locker -->
+  <div id="locker-modal" class="modal" style="display:none;">
+    <div class="modal-content" id="locker-modal-content">
+      <span id="close-locker" class="close">&times;</span>
+      <h2>Unlock Download</h2>
+      <div id="locker-step-email">
+        <p>Enter your email to receive exclusive updates and unlock the download:</p>
+        <form id="locker-email-form" autocomplete="off" style="margin-bottom:1em;">
+          <input type="email" id="locker-email" required placeholder="your@email.com" style="padding:0.65em 1em;border-radius:6px;border:1px solid #4ec9e6;width:82%;max-width:260px;">
+          <button type="submit" style="margin-left:8px;padding:0.6em 1.2em;border:none;background:#27b36a;color:#fff;font-weight:600;border-radius:5px;">Submit</button>
+        </form>
+        <div id="locker-email-error" style="color:#ed3a3a;font-size:0.95em;display:none;margin-bottom:0.5em"></div>
+      </div>
+      <div id="locker-step-survey" style="display:none;">
+        <p>Complete a short survey or social action to unlock (demo):</p>
+        <div style="background:#282f3c;color:#91caff;padding:1.15em 1em;border-radius:8px;margin-bottom:1.2em;min-width:220px;">
+          <b>Survey (Mock):</b> <br/>
+          Which platforms do you play on?<br/>
+          <label style="display:block;margin:6px 0 0 0;"><input type="checkbox"> PC</label>
+          <label style="display:block;margin:3px 0 0 0;"><input type="checkbox"> Xbox</label>
+          <label style="display:block;margin:3px 0 0 0;"><input type="checkbox"> PlayStation</label>
+          <label style="display:block;margin:3px 0 0 0;"><input type="checkbox"> Mobile</label>
+        </div>
+        <button id="fake-survey-submit" style="background:#2886f7;color:#fff;padding:0.8em 1.9em;border:none;border-radius:5px;font-weight:600;">Finish & Unlock Download</button>
+      </div>
+      <div id="locker-step-success" style="display:none;">
+        <h3 style="color:#3fe67b;margin-bottom:0.7em;">✔ Download Unlocked!</h3>
+        <a id="real-download-btn" href="#" class="download-btn" style="font-size:1em;">Continue to Download</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/mod-details.js"></script>
+</body>
+</html>
